@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            SvelteScaling - Does Svelte Scale?
+        </title>
+
+        <meta name="description" content="SvelteScaling, deterimining whether Svelte scales and visualizing the results. Does Svelte scale? ">
+        <meta name="keywords" content="Svelte, js, javascript, node, analysis, node, plotly, data, react, vue, angular, spa">
+        <meta name="robots" content="index, follow">
+        <meta name="language" content="English">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="visualization/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="visualization/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="visualization/favicon/favicon-16x16.png">
+        <link rel="manifest" href="visualization/favicon/site.webmanifest">
+        <link rel="mask-icon" href="visualization/favicon/safari-pinned-tab.svg" color="#0355ea">
+        <link rel="shortcut icon" href="visualization/favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#020202">
+        <meta name="msapplication-config" content="visualization/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#020202">
+
+        <!-- Libraries -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.acmion.com/acmion/hyper-nav/dist/hyper-nav-default.min.css" />
+
+        <!-- Custom -->
+        <link rel="stylesheet" href="visualization/css/main.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="hn-menu hn-top hn-fixed hn-shadow">
+                <input type="checkbox" name="hn-top-state" class="hn-input-state hn-input-state-nav hn-hide-desktop" id="hn-nav-cb">
+            
+                <div class="hn-nav container p-0">
+                    <div class="hn-section hn-section-brand">
+                        <div class="hn-item">
+                            <a id="hn-logo" class="hn-link" href="#home">
+                                <span class="hn-content">
+                                    <strong style="font-weight: 600;">
+                                        SvelteScaling
+                                    </strong>
+                                </span>
+                            </a>
+                        </div>
+            
+                        <label class="hn-item hn-input hn-input-nav hn-hide-desktop" for="hn-nav-cb">
+                            <span class="hn-link">
+                                <span class="hn-content">
+                                    <span class="hn-input-active ">
+                                        <i class="ri-close-line"></i>
+                                    </span>
+                                    <span class="hn-input-default">
+                                        <i class="ri-menu-line"></i>
+                                    </span>
+                                </span>
+                            </span>
+                        </label>
+            
+                    </div>
+                    <div class="hn-section hn-section-body">
+                        <div class="hn-spacer"></div>
+
+                        <div class="hn-item">
+                            <a class="hn-link" href="#home">
+                                <span class="hn-content">
+                                    Home
+                                </span>
+                            </a>
+                        </div>
+                        <div class="hn-item">
+                            <a class="hn-link" href="#conclusion">
+                                <span class="hn-content">
+                                    Conclusion
+                                </span>
+                            </a>
+                        </div>
+                        <div class="hn-item">
+                            <a class="hn-link" href="#methodology">
+                                <span class="hn-content">
+                                    Methodology
+                                </span>
+                            </a>
+                        </div>
+                        <div class="hn-item">
+                            <a class="hn-link" href="#analysis">
+                                <span class="hn-content">
+                                    Analysis
+                                </span>
+                            </a>
+                        </div>
+                        <div class="hn-item">
+                            <a class="hn-link" href="#credits">
+                                <span class="hn-content">
+                                    Credits
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+                <label class="hn-overlay" for="hn-nav-cb">
+                </label>
+            </nav>
+        </header>
+
+        <div class="scroll-anchor-height"></div>
+
+        <main class="container">
+            <section>
+                <h1 class="scroll-anchor" id="home">
+                    SvelteScaling - Does Svelte Scale?
+                </h1>
+                <blockquote>
+                    <p>
+                        <strong>
+                            "<a href="https://svelte.dev">Svelte</a> is a radical new approach to building user interfaces.
+                            Whereas traditional frameworks like React and Vue do the bulk of their work in the browser,
+                            Svelte shifts that work into a compile step that happens when you build your app.
+                            
+                            Instead of using techniques like virtual DOM diffing, Svelte writes code that surgically
+                            updates the DOM when the state of your app changes."
+                        </strong>
+                    </p>
+                    <footer>
+                        Description of Svelte at <cite><a href="https://svelte.dev">svelte.dev</a></cite>.
+                    </footer>
+                </blockquote>
+
+                <p>
+                    This new way of building user interfaces has several benefits. The bundle size of Svelte is 
+                    generally smaller than its competitors. Additionally, Svelte often outperforms in both
+                    general performance and memory usage, amongst other categories. See benchmarks at 
+                    <a href="https://krausest.github.io/js-framework-benchmark/index.html">js-framework-benchmark</a>.
+                    This combined with the fact that Svelte's syntax is significantly cleaner than, for example, React's,
+                    makes one think whether Svelte is the one framework to rule them all?
+                </p>
+
+                <p>
+                    Svelte's approach has, however, a potential problem. Ditching the virtual DOM means that the incremental cost of
+                    each Svelte component is higher than it would be when using a virtual DOM. In practice, this means that
+                    there might be an inflection point, where the payload of other frameworks might actually be less than 
+                    that of Svelte. Other performance categories are unlikely to be affected by the payload size. This has been brought
+                    up many times, see for example this <a href="https://github.com/sveltejs/svelte/issues/2546">GitHub issue</a>. 
+                    SvelteScaling aims to determine whether an inflection point exists and more generally, answer the question: 
+                    <strong>Does Svelte scale?</strong> 
+                </p>
+            </section>
+
+            <section>
+                <h2 class="scroll-anchor" id="conclusion">
+                    Conclusion
+                </h2>
+                <p>
+                    Todo
+                </p>
+            </section>
+
+            <section>
+                <h2 class="scroll-anchor" id="methodology">
+                    Methodology
+                </h2>
+                <p>
+                    The steps that are taken by SvelteScaling to determine whether Svelte scales:
+                    <ol>
+                        <li>
+                            Create a framework specific project.
+                        </li>
+                        <li>
+                            Import <strong>N</strong> components used in real world projects.
+                        </li>
+                        <li>
+                            Reference and instantiate all imported components.
+                        </li>
+                        <li>
+                            Build an optimized bundle of an application.
+                        </li>
+                        <li>
+                            Measure the size of the source components and the size of the output bundle (and their gzipped variants).
+                        </li>
+                        <li>
+                            Repeat this process for many different values of <strong>N</strong> and procure data.
+                        </li>
+                        <li>
+                            Determine the relationship between source component and output bundle sizes and report and compare them with other frameworks.
+                        </li>
+                        <li>
+                            Repeat the above steps for different frameworks.
+                        </li>
+                        <li>
+                            Answer the question: <strong>Does Svelte scale?</strong>
+                        </li>
+                    </ol>
+                </p>
+            </section>
+
+            <section>
+                <h2 class="scroll-anchor" id="analysis">
+                    Analysis
+                </h2>
+                <p>
+                    This section analyses how the component source size affects the bundle size of various frameworks.
+                </p>
+
+                <section>
+                    <h3>
+                        Combined
+                    </h3>
+                    <div id=""></div>
+                </section>
+
+                <section>
+                    <h3>
+                        Svelte
+                    </h3>
+                    <div id="source-vs-bundle-chart-react"></div>
+                </section>
+
+                <section>
+                    <h3>
+                        React
+                    </h3>
+                    <div id="source-vs-bundle-chart-react"></div>
+                </section>
+            </section>
+
+            <section>
+                <h2 class="scroll-anchor" id="credits">
+                    Credits
+                </h2>
+                <p>
+                    SvelteScaling is largely inspired by <a href="https://github.com/halfnelson/svelte-it-will-scale">halfnelson/svelte-it-will-scale</a>.
+                </p>
+            </section>
+            
+        </main>
+
+        <div>
+            <!-- Scripts -->
+
+            <!-- Libraries -->
+            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+            <!-- Custom -->
+            <script src="visualization/js/data-handler.js"></script>
+            <script src="visualization/js/elements.js"></script>
+
+            <!-- Initializer -->
+            <script src="visualization/js/main.js"></script>
+        </div>
+    </body>
+</html>

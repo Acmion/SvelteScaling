@@ -1,0 +1,35 @@
+html 
+{
+    font-size: 62.5%;
+    overflow-y: scroll;
+}
+
+body
+{
+    font-size: 1.6rem;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-weight: bold;
+}
+
+.hn-menu a 
+{
+    text-decoration: none !important;
+}
+
+.scroll-anchor:before 
+{
+    content: '';
+    display: block;
+    position: relative;
+    width: 0;
+    height: 7rem;
+    margin-top: -7rem;
+}
+
+.scroll-anchor-height
+{
+    height: 7rem;
+}

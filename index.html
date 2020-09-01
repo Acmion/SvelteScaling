@@ -48,7 +48,9 @@
                                 </span>
                             </a>
                         </div>
-            
+                        
+                        <div class="hn-spacer"></div>
+
                         <label class="hn-item hn-input hn-input-nav hn-hide-desktop" for="hn-nav-cb">
                             <span class="hn-link">
                                 <span class="hn-content">
@@ -138,7 +140,7 @@
                     general performance and memory usage, amongst other categories. See benchmarks at 
                     <a href="https://krausest.github.io/js-framework-benchmark/index.html">js-framework-benchmark</a>.
                     This combined with the fact that Svelte's syntax is significantly cleaner than, for example, React's,
-                    makes one think whether Svelte is the one framework to rule them all?
+                    makes one wonder whether Svelte is the one framework to rule them all?
                 </p>
 
                 <p>
@@ -212,13 +214,46 @@
                         Combined
                     </h3>
                     <div id=""></div>
+                    <p>
+                        TODO
+                    </p>
                 </section>
 
                 <section>
                     <h3>
                         Svelte
                     </h3>
-                    <div id="source-vs-bundle-chart-react"></div>
+                    
+                    <section>
+                        <h5 class="text-center px-4">
+                            Component Source Size VS Bundle Size
+                        </h5>
+                        <div id="source-vs-bundle-chart-svelte"></div>
+                    </section>
+
+                    <section>
+                        <h5>
+                            Total Bundle Size Linear Regression Coefficients
+                        </h5>
+
+                        <p>
+                            Slope: <span id="total-bundle-linear-regression-slope-svelte">xx</span>
+                            <br />
+                            Intercept: <span id="total-bundle-linear-regression-intercept-svelte">xx</span>
+                        </p>
+                    </section>
+
+                    <section>
+                        <h5>
+                            Gzipped Total Bundle Size Linear Regression Coefficients
+                        </h5>
+                    
+                        <p>
+                            Slope: <span id="total-bundle-gzipped-linear-regression-slope-svelte">xx</span>
+                            <br />
+                            Intercept: <span id="total-bundle-gzipped-linear-regression-intercept-svelte">xx</span>
+                        </p>
+                    </section>
                 </section>
 
                 <section>
@@ -226,6 +261,9 @@
                         React
                     </h3>
                     <div id="source-vs-bundle-chart-react"></div>
+                    <p>
+                        TODO
+                    </p>
                 </section>
             </section>
 
@@ -240,15 +278,23 @@
             
         </main>
 
+        <div style="height: 200px"></div>
+
         <div>
             <!-- Scripts -->
 
             <!-- Libraries -->
             <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+            <script src='https://unpkg.com/simple-statistics@7.1.0/dist/simple-statistics.min.js'></script>
 
             <!-- Custom -->
             <script src="visualization/js/data-handler.js"></script>
             <script src="visualization/js/elements.js"></script>
+            <script src="visualization/js/plot-settings.js"></script>
+            <script src="visualization/js/frameworks/svelte-analysis.js"></script>
+
+            <!-- JSONP Data -->
+            <script src="data/svelte-data.jsonp"></script>
 
             <!-- Initializer -->
             <script src="visualization/js/main.js"></script>

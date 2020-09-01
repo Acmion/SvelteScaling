@@ -1,6 +1,6 @@
 [
     {
-        "svelteApp": "svelte-app-0",
+        "app": "svelte-app-0",
         "componentSourceSize": 0,
         "jsBundleSize": 2666,
         "cssBundleSize": 39,
@@ -10,7 +10,7 @@
         "gippedTotalBundleSize": 1344
     },
     {
-        "svelteApp": "svelte-app-1",
+        "app": "svelte-app-1",
         "componentSourceSize": 2131,
         "jsBundleSize": 4264,
         "cssBundleSize": 478,
@@ -20,7 +20,7 @@
         "gippedTotalBundleSize": 2217
     },
     {
-        "svelteApp": "svelte-app-16",
+        "app": "svelte-app-16",
         "componentSourceSize": 21462,
         "jsBundleSize": 30866,
         "cssBundleSize": 4107,
@@ -30,7 +30,7 @@
         "gippedTotalBundleSize": 11364
     },
     {
-        "svelteApp": "svelte-app-2",
+        "app": "svelte-app-2",
         "componentSourceSize": 2933,
         "jsBundleSize": 5710,
         "cssBundleSize": 881,
@@ -40,7 +40,7 @@
         "gippedTotalBundleSize": 2936
     },
     {
-        "svelteApp": "svelte-app-4",
+        "app": "svelte-app-4",
         "componentSourceSize": 5720,
         "jsBundleSize": 9330,
         "cssBundleSize": 881,
@@ -50,7 +50,7 @@
         "gippedTotalBundleSize": 3918
     },
     {
-        "svelteApp": "svelte-app-8",
+        "app": "svelte-app-8",
         "componentSourceSize": 13172,
         "jsBundleSize": 17965,
         "cssBundleSize": 2122,

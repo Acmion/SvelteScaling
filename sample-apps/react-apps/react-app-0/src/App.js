@@ -1,10 +1,6 @@
 import React from 'react';
 
-import Avatar from "./_components/reactjs-org/Avatar";
-import Comment from "./_components/reactjs-org/Comment";
-import UserInfo from "./_components/reactjs-org/UserInfo";
-import Welcome from "./_components/reactjs-org/Welcome";
-import Clock from "./_components/reactjs-org/Clock";
+import "./App.css";
 
 class App extends React.Component
 {
@@ -16,12 +12,8 @@ class App extends React.Component
     render()
     {
         return (
-            <div>
-                <Avatar />
-                <Comment />
-                <UserInfo />
-                <Welcome />
-                <Clock />
+            <div className="App">
+                <h1>react-app-0</h1>
             </div>
         );
     }

@@ -1,0 +1,62 @@
+[
+    {
+        "app": "react-app-0",
+        "componentSourceSize": 0,
+        "jsBundleSize": 133579,
+        "cssBundleSize": 70,
+        "totalBundleSize": 133649,
+        "gzippedJsBundleSize": 42123,
+        "gzippedCssBundleSize": 89,
+        "gippedTotalBundleSize": 42212
+    },
+    {
+        "app": "react-app-1",
+        "componentSourceSize": 412,
+        "jsBundleSize": 133869,
+        "cssBundleSize": 81,
+        "totalBundleSize": 133950,
+        "gzippedJsBundleSize": 42152,
+        "gzippedCssBundleSize": 99,
+        "gippedTotalBundleSize": 42251
+    },
+    {
+        "app": "react-app-16",
+        "componentSourceSize": 14790,
+        "jsBundleSize": 144160,
+        "cssBundleSize": 636,
+        "totalBundleSize": 144796,
+        "gzippedJsBundleSize": 44102,
+        "gzippedCssBundleSize": 372,
+        "gippedTotalBundleSize": 44474
+    },
+    {
+        "app": "react-app-2",
+        "componentSourceSize": 773,
+        "jsBundleSize": 134223,
+        "cssBundleSize": 100,
+        "totalBundleSize": 134323,
+        "gzippedJsBundleSize": 42223,
+        "gzippedCssBundleSize": 117,
+        "gippedTotalBundleSize": 42340
+    },
+    {
+        "app": "react-app-4",
+        "componentSourceSize": 2221,
+        "jsBundleSize": 135189,
+        "cssBundleSize": 227,
+        "totalBundleSize": 135416,
+        "gzippedJsBundleSize": 42357,
+        "gzippedCssBundleSize": 200,
+        "gippedTotalBundleSize": 42557
+    },
+    {
+        "app": "react-app-8",
+        "componentSourceSize": 5603,
+        "jsBundleSize": 137838,
+        "cssBundleSize": 361,
+        "totalBundleSize": 138199,
+        "gzippedJsBundleSize": 42876,
+        "gzippedCssBundleSize": 258,
+        "gippedTotalBundleSize": 43134
+    }
+]

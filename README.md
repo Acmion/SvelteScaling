@@ -33,7 +33,7 @@ Inspired by **[svelte-it-will-scale](https://github.com/halfnelson/svelte-it-wil
 2. All React applications contain a `<react-app-directory>/src/_components/` directory. The number of components in each app varies.
 3. All components will be referenced and instantiated in `<react-app-directory>/src/App.js`, which does not contain anything besides the code required by the components and one H1 tag that specifies the name of the app.
 4. The components are taken from the following projects:
-    + [reactjs.org/docs](https://reactjs.org/docs)
+    + [reactjs/reactjs.org](https://github.com/reactjs/reactjs.org)
 5. Components that require properties or CSS variables to be specified, so that visible content will be rendered, will have them specified in their `<component-name>.js` files. All comments will be removed. All dependencies on external components will be removed (for example: feather-icons). Reliance on stores will be rewritten to standard JS variables. 
 6. The application is built with `npm run build`. This will build an optimized version of the app.
 7. The following sizes are measured:

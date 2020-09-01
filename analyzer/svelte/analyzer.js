@@ -25,7 +25,7 @@ class SvelteAnalyzer
         {
             console.log("    Building " + appPath);
 
-            //this.buildApp(appPath);
+            this.buildApp(appPath);
 
             console.log("    Finished building.");
         }
@@ -50,7 +50,7 @@ class SvelteAnalyzer
         File.write(svelteJsonDataOutputFilePath, JSON.stringify(extractedData, null, 4));
         File.write(svelteJsonpDataOutputFilePath, this.getJsonpEncodedData(extractedData));
 
-        console.log("  Finsihed extracting data from Svelte applications.");
+        console.log("  Finished extracting data from Svelte applications.");
 
         // --------------------------------------------------------------------------------------
 
@@ -70,7 +70,7 @@ class SvelteAnalyzer
 
         var data =
         {
-            svelteApp: Path.basename(appPath),
+            app: Path.basename(appPath),
             componentSourceSize: Directory.getSize(componentsPath),
             jsBundleSize: File.getSize(jsBundlePath),
             cssBundleSize: File.getSize(cssBundlePath),

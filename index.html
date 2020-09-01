@@ -156,10 +156,57 @@
 
             <section>
                 <h2 class="scroll-anchor" id="conclusion">
-                    Conclusion
+                    Conclusions
                 </h2>
                 <p>
-                    Todo
+                    This analysis concludes that the inflection point between Svelte and React lies at approximately <strong>137 KB</strong>
+                    of component source code, after which the initial download of a gzipped Svelte application will be higher 
+                    than that of a gzipped React application. For uncompressed applications, the inflection point is a about
+                    <strong>178 KB</strong>. <a href="https://github.com/halfnelson/svelte-it-will-scale">Will it Scale? - Finding Svelte's Inflection Point</a>
+                    a similar study as SvelteScaling, approximated the gzipped inflection point to <strong>120 KB</strong>, which is 
+                    quite close to <strong>137 KB</strong>. This fact reinforces the validity of this analysis.
+                </p>
+                
+                <p>
+                    Is <strong>137 KB</strong> a lot or not? This is a list of some of the largest open source projects 
+                    and their component source size that I was able to find:
+                    <ul>
+                        <li>
+                            <a href="https://github.com/echenley/react-news">React-News</a>: 24.4 KB
+                        </li>
+                        <li>
+                            <a href="https://github.com/andrewngu/sound-redux">SoundRedux</a>: 87.5 KB
+                        </li>
+                        <li>
+                            <a href="https://github.com/WebbyLab/itsquiz-wall">Isomorphic "Quiz Wall" for itsquiz.com</a>: 145 KB
+                        </li>
+                        <li>
+                            <a href="https://github.com/reduxjs/redux/tree/master/examples/todomvc">Redux TodoMVC Example</a>: 23.8 KB
+                        </li>
+                        <li>
+                            <a href="https://github.com/Automattic/wp-calypso">Calypso</a>: 3.82 MB
+                        </li>
+                        <li>
+                            <a href="https://github.com/bestguy/sveltestrap">sveltestrap</a>: 73.7 KB
+                        </li>
+                        <li>
+                            <a href="https://github.com/c0bra/svelma">Svelma</a>: 84.6 KB
+                        </li>
+                        <li>
+                            <a href="https://github.com/IBM/carbon-components-svelte">carbon-components-svelte</a>: 418 KB
+                        </li>
+                    </ul>
+
+                    Note that the reported component source size does not necessarily reflect the optimized application, since 
+                    all components may not be used (all components were used and instantiated in the analysis section). However, 
+                    <strong>137 KB</strong> seems to be enough in most cases.  
+                </p>
+
+                <p>
+                    Regardless of whether the initial payload of a Svelte application might be higher after a certain point,
+                    I've still enjoyed Svelte a lot more than alternative frameworks. The syntax alone makes development with
+                    Svelte a delight, especially now that TypeScript support has been implemented. All of this combined with the 
+                    benefits in runtime performance, makes Svelte an exceptional choice for building frontend user interfaces.    
                 </p>
             </section>
 
@@ -199,6 +246,11 @@
                         </li>
                     </ol>
                 </p>
+
+                <p>
+                    The entire analysis can be reproduced by running a few JavaScript scripts with NodeJS. See more details in the 
+                    <a href="">GitHub repo</a>.
+                </p>
             </section>
 
             <section>
@@ -213,10 +265,29 @@
                     <h3>
                         Combined
                     </h3>
-                    <div id=""></div>
-                    <p>
-                        TODO
-                    </p>
+                
+                    <section>
+                        <h5 class="text-center px-4">
+                            Component Source Size VS Bundle Size
+                        </h5>
+                        <div id="source-vs-bundle-chart-combined"></div>
+                    </section>
+                    <section>
+                        <h5>
+                            Svelte & React Inflection Point
+                        </h5>
+                    
+                        <p>
+                            Uncompressed: Approximately 178 KB of component source code. 
+                            <br />
+                            Gzipped: Approximately 137 KB of component source code.
+                        </p>
+                        <p>
+                            When the component source code is higher than the values above, then 
+                            the initial download of a Svelte app will be higher than that of a React 
+                            app. 
+                        </p>
+                    </section>
                 </section>
 
                 <section>
@@ -260,10 +331,37 @@
                     <h3>
                         React
                     </h3>
-                    <div id="source-vs-bundle-chart-react"></div>
-                    <p>
-                        TODO
-                    </p>
+                
+                    <section>
+                        <h5 class="text-center px-4">
+                            Component Source Size VS Bundle Size
+                        </h5>
+                        <div id="source-vs-bundle-chart-react"></div>
+                    </section>
+                
+                    <section>
+                        <h5>
+                            Total Bundle Size Linear Regression Coefficients
+                        </h5>
+                
+                        <p>
+                            Slope: <span id="total-bundle-linear-regression-slope-react">xx</span>
+                            <br />
+                            Intercept: <span id="total-bundle-linear-regression-intercept-react">xx</span>
+                        </p>
+                    </section>
+                
+                    <section>
+                        <h5>
+                            Gzipped Total Bundle Size Linear Regression Coefficients
+                        </h5>
+                
+                        <p>
+                            Slope: <span id="total-bundle-gzipped-linear-regression-slope-react">xx</span>
+                            <br />
+                            Intercept: <span id="total-bundle-gzipped-linear-regression-intercept-react">xx</span>
+                        </p>
+                    </section>
                 </section>
             </section>
 
@@ -272,7 +370,10 @@
                     Credits
                 </h2>
                 <p>
-                    SvelteScaling is largely inspired by <a href="https://github.com/halfnelson/svelte-it-will-scale">halfnelson/svelte-it-will-scale</a>.
+                    SvelteScaling was produced by <a href="https://acmion.com">Acmion</a> <a href="https://github.com/Acmion">(GitHub)</a>.
+                </p>
+                <p>
+                    SvelteScaling was largely inspired by <a href="https://github.com/halfnelson/svelte-it-will-scale">halfnelson/svelte-it-will-scale</a>.
                 </p>
             </section>
             
@@ -291,9 +392,11 @@
             <script src="visualization/js/data-handler.js"></script>
             <script src="visualization/js/elements.js"></script>
             <script src="visualization/js/plot-settings.js"></script>
-            <script src="visualization/js/frameworks/svelte-analysis.js"></script>
+            <script src="visualization/js/analysis.js"></script>
+            <script src="visualization/js/analysis-combined.js"></script>
 
             <!-- JSONP Data -->
+            <script src="data/react-data.jsonp"></script>
             <script src="data/svelte-data.jsonp"></script>
 
             <!-- Initializer -->

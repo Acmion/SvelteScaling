@@ -37,7 +37,7 @@
             <nav class="hn-menu hn-top hn-fixed hn-shadow">
                 <input type="checkbox" name="hn-top-state" class="hn-input-state hn-input-state-nav hn-hide-desktop" id="hn-nav-cb">
             
-                <div class="hn-nav container p-0">
+                <div class="hn-nav container-md p-0">
                     <div class="hn-section hn-section-brand">
                         <div class="hn-item">
                             <a id="hn-logo" class="hn-link" href="#home">
@@ -93,6 +93,13 @@
                             <a class="hn-link" href="#analysis">
                                 <span class="hn-content">
                                     Analysis
+                                </span>
+                            </a>
+                        </div>
+                        <div class="hn-item">
+                            <a class="hn-link" href="#reproduction">
+                                <span class="hn-content">
+                                    Reproduction
                                 </span>
                             </a>
                         </div>
@@ -199,8 +206,11 @@
 
                     Note that the reported component source size does not necessarily reflect the optimized application, since 
                     all components may not be used (all components were used and instantiated in the analysis section). However, 
-                    <strong>137 KB</strong> seems to be enough in most cases.  
+                    <strong>137 KB</strong> seems to be enough in most cases. While <strong>137 KB</strong> of component source code 
+                    is certainly reachable for a SPA, the amount of components that a single view in an app references will unlikely 
+                    reach this limit. Thus, with code splitting techniques the initial 
                 </p>
+
 
                 <p>
                     Regardless of whether the initial payload of a Svelte application might be higher after a certain point,
@@ -366,6 +376,15 @@
             </section>
 
             <section>
+                <h2 class="scroll-anchor" id="reproduction">
+                    Reproduction
+                </h2>
+                <p>
+                    To reproduce the analysis in this document, see the instructions in the <a href="https://github.com/Acmion/SvelteScaling">GitHub repository</a>.
+                </p>
+            </section>
+
+            <section>
                 <h2 class="scroll-anchor" id="credits">
                     Credits
                 </h2>
@@ -375,6 +394,29 @@
                 <p>
                     SvelteScaling was largely inspired by <a href="https://github.com/halfnelson/svelte-it-will-scale">halfnelson/svelte-it-will-scale</a>.
                 </p>
+
+                <section>
+                    <h3>
+                        Contributing
+                    </h3>
+
+                    <p>
+                        Want to contribute? Head over to SvelteScaling's <a href="https://github.com/Acmion/SvelteScaling">GitHub repository</a>.
+                    </p>
+
+                    <p>
+                        Things that could be done:
+                        <ul>
+                            <li>
+                                Include real world projects, rather than just collection of components, in this analysis.
+                            </li>
+                            <li>
+                                Include similar analysis of other frameworks, for example, Vue.
+                            </li>
+                        </ul>
+                    </p>
+                </section>
+                
             </section>
             
         </main>

@@ -3,6 +3,19 @@ Testing the scalability of Svelte.
 
 Inspired by **[svelte-it-will-scale](https://github.com/halfnelson/svelte-it-will-scale)**. If two studies come to similar results, then the conclusions are with a higher probability correct.
 
+## Analyze
+
+To perform the analysis on your own computer, do the following: 
+
+1. Install NodeJS.
+2. Install npm.
+3. Clone this repository.
+4. Execute `node install.js`, which installs all npm dependencies for projects.
+5. Execute `node analyze.js`, which performs the actual analysis.
+6. View `index.html` in a browser to see the report.
+
+**Warning:** The analysis will take approximately 1 GB of disk space (mostly npm packages). 
+
 ## Methodology & Structure
 
 ### Svelte

@@ -10,7 +10,7 @@ To perform the analysis on your own computer, do the following:
 1. Install NodeJS.
 2. Install npm.
 3. Clone this repository.
-4. Execute `node install.js`, which installs all npm dependencies for projects.
+4. Execute `node install.js`, which installs all npm dependencies for projects. This step takes about 10 minutes to execute.
 5. Execute `node analyze.js`, which performs the actual analysis.
 6. View `index.html` in a browser to see the report.
 

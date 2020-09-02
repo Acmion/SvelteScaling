@@ -1,5 +1,7 @@
 # SvelteScaling
-Testing the scalability of Svelte.
+Analyzing the scalability of Svelte. 
+
+[Results of the analysis](http://svelte-scaling.acmion.com).
 
 Inspired by **[svelte-it-will-scale](https://github.com/halfnelson/svelte-it-will-scale)**. If two studies come to similar results, then the conclusions are with a higher probability correct.
 

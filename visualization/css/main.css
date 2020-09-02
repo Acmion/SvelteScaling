@@ -1,3 +1,9 @@
+:root
+{
+    --hn-top-link-padding-right: 0.8rem;
+    --hn-top-link-padding-left: 0.8rem;
+}
+
 html 
 {
     font-size: 62.5%;

@@ -1,8 +1,8 @@
 # SvelteScaling
 Analyzing the scalability of Svelte. 
 
-# [Results of the Analysis](https://svelte-scaling.acmion.com)
-[https://svelte-scaling.acmion.com](https://svelte-scaling.acmion.com)
+# [Results of the Analysis](http://svelte-scaling.acmion.com)
+[http://svelte-scaling.acmion.com](http://svelte-scaling.acmion.com)
 
 ## About
 
